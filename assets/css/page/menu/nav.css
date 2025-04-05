@@ -11,6 +11,10 @@ nav{
     display: flex;
     justify-content: space-between;
     padding: 5px 40px;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    background-color: #F5EBDC;
 }
 
 
@@ -43,6 +47,29 @@ nav .menu ul a:hover {
     border-bottom: 2px solid #D62300;
 }
 
+nav .menu ul a {
+    position: relative; 
+}
+
+nav .menu ul a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; 
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #D62300;
+}
+
+nav .menu ul a.active {
+    color: #D62300; 
+    border-bottom: none; 
+}
+
+nav .menu ul a.active:hover {
+    border-bottom: none;
+}
+
 nav .logo{
     width: 20%;
     height: 100%;
@@ -68,17 +95,20 @@ nav .registo{
 nav .registo a{
     text-decoration: none;
     color: white;
-    padding: 5px 15px ;
+    padding: 5px 20px ;
     background-color: var(--cor);
     border-radius: 30px;
     text-align: center;
     font-weight: 700;
     font-size: 14px;
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 15px;
 }
 #resgistar{
     background-color: #D62300;
+    padding: 7px 15px;
 }
 #resgistar:hover{
     background-color: #851600;
@@ -86,5 +116,17 @@ nav .registo a{
 nav .registo a:hover{
     background-color: #31140a;
 }
+
+.registo a p{
+    padding: 2px 6px;
+    border-radius: 50%;
+    background-color: #D62300;
+    font-size: 13px;
+}
+
+.bi-cart3{
+    font-size: 17px;
+}
+
 
 

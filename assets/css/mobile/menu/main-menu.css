@@ -1,0 +1,55 @@
+/* Media Queries ajustadas para 3-2-1 colunas */
+@media (max-width: 767px) {
+    /* Mobile (1 coluna) */
+    .cards-menu-container {
+        grid-template-columns: 1fr;
+        gap: 16px; 
+    }
+    
+    .card {
+        min-height: 250px;
+    }
+    
+    .card-img {
+        height: 160px;
+    }
+    
+    main {
+        padding: 0 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Tablet (2 colunas) */
+    .cards-menu-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px; 
+    }
+    
+    .card-img {
+        height: 200px;
+    }
+    
+    main {
+        padding: 0 40px;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Desktop (3 colunas fixas) */
+    .cards-menu-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px; 
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .card-img {
+        height: 230px;
+    }
+    
+    main {
+        padding: 0 60px;
+    }
+}
