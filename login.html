@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="assets/css/page/login/login.css">
+<link rel="stylesheet" href="assets/css/mobile/login/login.css">
+    <link
+      rel="shortcut icon"
+      href="assets/img/shortcut icon.png"
+      type="image/x-icon"
+    />
+
+    <title>Registar </title>
+  </head>
+  <body>
+    <section>
+      <div class="lado-esquerdo">
+        <img src="assets/img/login/imagem lado esquerdo login.jpg" alt="" />
+      </div>
+
+      <div class="lado-direito">
+        <div class="logo-login">
+          <img src="assets/img/shortcut icon.png" alt="" />
+        </div>
+        <div class="login">
+          <div class="tabs">
+            <div class="tab active" id="registerTab" onclick="showRegister()">
+              Registar
+            </div>
+            <div class="tab" id="loginTab" onclick="showLogin()">
+              Iniciar sessão
+            </div>
+          </div>
+          <div class="content" id="registerContent">
+            <div class="social-btn">
+              <img src="assets/img/login/google.png" alt="googlr" />
+              <p>Regista-te com Google</p>
+            </div>
+
+            <div class="social-btn">
+              <img src="assets/img/login/facebook.png" alt="facebook" />
+              <p>Regista-te com facebook</p>
+            </div>
+            <div class="separator">
+              <hr />
+              <span>OU</span>
+              <hr />
+            </div>
+            <input
+              type="text"
+              id="name"
+              placeholder="Digite o seu Nome Completo "
+            />
+            <span class="error" id="nameError"
+              >O nome deve ter pelo menos 8 caracteres.</span
+            >
+            <input type="email" id="email" placeholder="Digite o seu E-mail " />
+            <span class="error" id="emailError">Digite um e-mail válido.</span>
+            <button onclick="validateRegister()">Criar conta</button>
+          </div>
+          <div class="content" id="loginContent" style="display: none">
+            <div class="social-btn">
+              <img src="assets/img/login/google.png" alt="google" />
+              <p>Regista-te com Google</p>
+            </div>
+
+            <div class="social-btn">
+              <img src="assets/img/login/facebook.png" alt="facebook" />
+              <p>Regista-te com facebook</p>
+            </div>
+            <div class="separator">
+              <hr />
+              <span>OU</span>
+              <hr />
+            </div>
+            <input
+              type="email"
+              id="loginEmail"
+              placeholder="Digite o seu Endereço de email "
+            />
+            <span class="error" id="loginEmailError"
+              >Digite um e-mail válido.</span
+            >
+            <button onclick="validateLogin()">Iniciar sessão</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="assets/js/login/frameLogin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background: #ffb80e;
+}
+
+header {
+  height: 200px;
+  padding: 20px 0;
+}
+
+.logo {
+  width: 50%;
+  width: auto;
+  
+}
+
+.logo img {
+  width: 80px;
+  height: 80px;
+}
+
+.butao-login {
+  margin-left: 1000px;
+  padding-top: 20px;
+ 
+}
+.Login{
+    text-decoration: none;
+}
+
+.butao-login button {
+  --primary-color: #000000;
+  --secondary-color: #fff;
+  --hover-color: #111;
+  --arrow-width: 10px;
+  --arrow-stroke: 2px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 20px;
+  color: var(--secondary-color);
+  padding: 1em 1.8em;
+  background: var(--primary-color);
+  display: flex;
+  transition: 0.2s background;
+  align-items: center;
+  gap: 0.6em;
+  font-weight: bold;
+  cursor: pointer;
+  
+
+}
+
+.butao-login button .arrow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.butao-login button .arrow {
+  margin-top: 1px;
+  width: var(--arrow-width);
+  background: var(--primary-color);
+  height: var(--arrow-stroke);
+  position: relative;
+  transition: 0.2s;
+}
+
+.butao-login button .arrow::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  border: solid var(--secondary-color);
+  border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+  display: inline-block;
+  top: -3px;
+  right: 3px;
+  transition: 0.2s;
+  padding: 3px;
+  transform: rotate(-45deg);
+}
+
+.butao-login button:hover {
+  background-color: #ff611d;
+}
+
+.butao-login button:hover .arrow {
+  background: var(--secondary-color);
+}
+
+.butao-login button:hover .arrow:before {
+  right: 0;
+}
+.extras {
+  position: absolute;
+  bottom: -250px;
+  right: -300px;
+  width: 800px;
+  height: 700px;
+  border-radius: 50%;
+  background-color: #ff611d;
+}
+
+.imagem {
+  position: relative;
+  right: 36%;
+  margin-top: 40px;
+  margin-left: 200px;
+}
+
+
+section.Sobre {
+  height: calc(100% - 200px);
+  position: relative;
+}
+.texto-sobre > h1 {
+  padding: 25px;
+  color: #000000;
+}
+.decricao {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-left: 2%;
+}
+
+.decricao .bem-vindo h1{
+  display: none;
+}
+
+.Faça_Pedido{
+  text-decoration: none;
+}
+.texto-sobre button {
+  --primary-color: #000000;
+  --secondary-color: #fff;
+  --hover-color: #111;
+  --arrow-width: 10px;
+  --arrow-stroke: 2px;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: 20px;
+  color: var(--secondary-color);
+  padding: 1em 1.8em;
+  background: var(--primary-color);
+  display: flex;
+  transition: 0.2s background;
+  align-items: center;
+  gap: 0.6em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 40px;
+  }
+.texto-sobre button:hover {
+  background-color: #ff611d;
+}
+
+.RedesSociais {
+  position: relative;
+  width: 50%;
+  text-align: right;
+  padding-top: 10px;
+  width: 200px;
+  margin-left: 5%;
+}

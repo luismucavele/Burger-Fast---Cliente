@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --background-color:rgb(245, 235, 220);
+    --background-butao:#d62300;
+    --color-fonte:#a71b00;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-color:var(--background-color);
+}
+
+
+
+section{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    
+}
+
+section .lado-esquerdo{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .lado-esquerdo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+section .lado-direito{
+    width: 50%;
+    height: 100%;
+    background-color:var(--background-color);
+    padding: 20px;
+    
+   
+}
+
+section .lado-direito .logo-login{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+section .lado-direito .logo-login img{
+    width:15%;
+    height: 100%;
+}
+
+
+
+section .lado-direito .login{
+    width: 65%;
+    height: 80%;
+    margin: 10px auto;
+    border-radius: 20px;
+    background-color: white;
+    padding: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    margin-top: 20px;
+
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid rgb(197, 197, 197);
+}
+.tab {
+    cursor: pointer;
+    padding: 10px ;
+    color:#550e00;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: "Poppins", serif;
+}
+.tab.active {
+    border-bottom: 2px solid var(--color-fonte);
+    font-weight: bold;
+    font-size: 16px;
+}
+.content {
+    margin-top: 20px;
+}
+input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.error {
+    color: red;
+    font-size: 12px;
+    display: none;
+    text-align: left;
+}
+.error-border {
+    border: 1px solid red !important;
+}
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--color-fonte);
+    border-radius: 20px;
+    background-color: #f5ebdc;
+    cursor: pointer;
+    margin: 5px 0;
+    gap: 30px;
+    margin-bottom: 15px;
+   
+}
+
+.social-btn:hover{
+    background-color: RGB(240, 205, 187);
+
+}
+.social-btn img {
+  width: 20px;
+  height: 20px;
+}
+.social-btn p{
+    color: var(--color-fonte);
+    font-weight: bold;
+     font-family: "Poppins", serif;
+     font-size: 15px;
+     text-align: center;
+}
+.separator {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.separator hr {
+    flex: 1;
+    border: none;
+    border-top: 1px solid #000000;
+}
+.separator span {
+    margin: 0 10px;
+    font-weight: 500;
+    color: #000000;
+}
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--background-butao);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: "Poppins", serif;
+}
+button:hover {
+    background-color: darkred;
+}

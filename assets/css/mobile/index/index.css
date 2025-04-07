@@ -1,0 +1,198 @@
+@media (max-width: 1200px) {
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   
+  }
+
+  .extras {
+    display: none; /* Escondendo a div extras */
+  }
+
+  .butao-login {
+    position: absolute; /* Posicionando o elemento */
+    top: 10px; /* Distância do topo */
+    right: 10px; /* Distância da direita */
+    margin-left: 0; /* Removendo a margem */
+    text-align: right; /* Alinhando o texto à direita */
+    padding-top: 10px; /* Adicionando um espaçamento no topo */
+  }
+
+
+
+
+  .logo img {
+    width: 300px; /* Ajustando o tamanho da imagem */
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 10% auto; /* Distância do topo */
+    text-align: center;
+   
+   
+  }
+
+  .decricao .texto-sobre h1{
+    display: none;
+  }
+
+  .decricao .bem-vindo h1 {
+    display: block;
+    text-align: center;
+    margin: 45% auto;
+    font-weight: bold;
+   
+  }
+
+  .texto-sobre a button{
+    margin: 10% auto;
+    
+  }
+
+
+  .imagem {
+    display: none; /* Escondendo a imagem do hambúrguer */
+  }
+}
+
+@media (max-width: 900px){
+    .logo img {
+        width: 250px; /* Ajustando o tamanho da imagem */
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin: 45% auto; /* Distância do topo */
+        text-align: center;
+       
+      }
+    
+      .decricao .bem-vindo h1 {
+        display: block;
+        text-align: center;
+        margin: 60% auto;
+        font-weight: bold;
+        font-size: 30px;
+        
+      }
+      
+      .texto-sobre a button{
+        margin: 10% auto;
+        font-size: 20px;
+        
+        
+      }
+    
+}
+
+
+@media (max-width: 500px){
+    .logo img {
+        width: 200px; /* Ajustando o tamanho da imagem */
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin: 65% auto; /* Distância do topo */
+        text-align: center;
+       
+      }
+    
+      .decricao .bem-vindo h1 {
+        display: block;
+        text-align: center;
+        margin: 60% auto;
+        font-weight: bold;
+        font-size: 25px;
+        
+      }
+      
+      .texto-sobre a button{
+        margin: 10% auto;
+        font-size: 15px;
+        
+      }
+    
+}
+
+@media (max-width: 400px){
+    .logo img {
+        width: 150px; /* Ajustando o tamanho da imagem */
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin: 95% auto; /* Distância do topo */
+        text-align: center;
+       
+      }
+    
+      .decricao .bem-vindo h1 {
+        display: block;
+        text-align: center;
+        margin: 55% auto;
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      .texto-sobre a button{
+        margin: 13% auto;
+        font-size: 13px;
+
+        
+      }
+
+    
+}
+
+@media (max-width: 350px){
+    .logo img {
+        width: 150px; /* Ajustando o tamanho da imagem */
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin: 45% auto; /* Distância do topo */
+        text-align: center;
+       
+      }
+    
+      .decricao .bem-vindo h1 {
+        display: block;
+        text-align: center;
+        margin: 10% auto;
+        font-size: 18px;
+      }
+
+      .texto-sobre a button{
+        margin: 13% auto;
+        font-size: 13px;
+
+        
+      }
+
+
+}
+
+
+
+
+
+
