@@ -22,3 +22,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+// sobre nos 
+
+function abrirModalIdioma() {
+    document.getElementById("modal-idioma").style.display = "flex";
+  }
+  
+  function fecharModalIdioma() {
+    document.getElementById("modal-idioma").style.display = "none";
+  }
+  
+  document.getElementById("form-idioma").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const idiomaSelecionado = document.querySelector('input[name="idioma"]:checked').value;
+    console.log("Idioma selecionado:", idiomaSelecionado);
+  
+    // Aqui você pode guardar no localStorage ou aplicar lógica de idioma
+    fecharModalIdioma();
+  });
+  
