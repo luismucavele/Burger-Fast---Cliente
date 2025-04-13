@@ -1,0 +1,16 @@
+  
+  /* Responsivo */
+  @media only screen and (max-width: 300px) {
+    .anterior,
+    .proxima,
+    .legenda {
+      font-size: 11px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .cards-menu-container-promo {
+      grid-template-columns: 1fr; /* 1 card por linha no mobile */
+    }
+  }
+  

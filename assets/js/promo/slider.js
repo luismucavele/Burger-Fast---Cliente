@@ -2,6 +2,7 @@ let indiceSlide = 0;
 let temporizador;
 
 function mostrarSlides() {
+   
   let i;
   const slides = document.getElementsByClassName("slide");
   const pontos = document.getElementsByClassName("ponto");

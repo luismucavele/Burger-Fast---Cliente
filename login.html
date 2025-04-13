@@ -50,24 +50,24 @@
             <input
               type="text"
               id="name"
-              placeholder="Digite o seu Nome Completo "
+              placeholder="Digite o seu Nome Completo " required
             />
             <span class="error" id="nameError"
               >O nome deve ter pelo menos 8 caracteres.</span
             >
-            <input type="email" id="email" placeholder="Digite o seu E-mail " />
+            <input type="email" id="email" placeholder="Digite o seu E-mail " required />
             <span class="error" id="emailError">Digite um e-mail válido.</span>
             <button onclick="validateRegister()">Criar conta</button>
           </div>
           <div class="content" id="loginContent" style="display: none">
             <div class="social-btn">
               <img src="assets/img/login/google.png" alt="google" />
-              <p>Regista-te com Google</p>
+              <p>Iniciar sessão com Google</p>
             </div>
 
             <div class="social-btn">
               <img src="assets/img/login/facebook.png" alt="facebook" />
-              <p>Regista-te com facebook</p>
+              <p>Iniciar sessão com facebook</p>
             </div>
             <div class="separator">
               <hr />
@@ -78,7 +78,7 @@
               type="email"
               id="loginEmail"
               placeholder="Digite o seu Endereço de email "
-            />
+             required/>
             <span class="error" id="loginEmailError"
               >Digite um e-mail válido.</span
             >

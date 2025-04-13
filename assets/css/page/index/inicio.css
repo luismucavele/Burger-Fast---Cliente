@@ -18,7 +18,7 @@ body {
   height: 100%;
   overflow-y: hidden;
   overflow-x: hidden;
-  background: #ffb80e;
+  background-color: #F5EBDC;
 }
 
 header {
@@ -47,7 +47,7 @@ header {
 }
 
 .butao-login button {
-  --primary-color: #000000;
+  --primary-color: #D62300;
   --secondary-color: #fff;
   --hover-color: #111;
   --arrow-width: 10px;
@@ -99,7 +99,7 @@ header {
 }
 
 .butao-login button:hover {
-  background-color: #ff611d;
+  background-color: #851600;
 }
 
 .butao-login button:hover .arrow {
@@ -153,7 +153,7 @@ section.Sobre {
   text-decoration: none;
 }
 .texto-sobre button {
-  --primary-color: #000000;
+  --primary-color: #D62300;
   --secondary-color: #fff;
   --hover-color: #111;
   --arrow-width: 10px;
@@ -173,7 +173,7 @@ section.Sobre {
   margin-left: 40px;
   }
 .texto-sobre button:hover {
-  background-color: #ff611d;
+  background-color: #851600;
 }
 
 .RedesSociais {
