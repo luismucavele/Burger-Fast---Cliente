@@ -43,17 +43,18 @@
 
 
 
+
+
      <!--sobre nos-->
 
      <div class="sobre">
-      <a href="#">Sobre nos</a>
+      <a href="#"></a>
      </div>
-
-
        <!--sobre nos fechamento-->
     
     
      
+
     <div class="cardapio">
         <h1>Menu</h1>
     </div>
@@ -64,7 +65,7 @@
         <div class="cards-menu-container">
             
             <div class="card-menu">
-              <a href="#destaques">
+              <a href="#" class="menu-link" data-target="destaques">
                 <div class="card-menu-img">
                     <img src="assets/img/menu/Destaques.png" alt="Destaque">
                 </div>
@@ -75,7 +76,7 @@
             </div>
 
             <div class="card-menu">
-              <a href="#hamburguer">
+              <a href="#" class="menu-link" data-target="hamburguer">
                 <div class="card-menu-img">
                     <img src="assets/img/menu/hambuguer.jpg" alt="Hambúrguer">
                 </div>
@@ -86,7 +87,7 @@
             </div>
 
             <div class="card-menu">
-              <a href="#frango">
+              <a href="#" class="menu-link" data-target="frango">
                 <div class="card-menu-img">
                     <img src="assets/img/menu/frango.jpg" alt="Frango">
                 </div>
@@ -97,7 +98,7 @@
             </div>
 
             <div class="card-menu">
-              <a href="#">
+              <a href="#" class="menu-link" data-target="sandes">
                 <div class="card-menu-img">
                     <img src="assets/img/menu/sandes.jpg" alt="sandes">
                 </div>
@@ -108,7 +109,7 @@
             </div>
 
             <div class="card-menu">
-              <a href="#">
+              <a href="#" class="menu-link" data-target="Batatas">
                 <div class="card-menu-img">
                     <img src="assets/img/menu/Batatas Fritas.jpg" alt="Batatas Fritas">
                 </div>
@@ -119,7 +120,7 @@
             </div>
        
             <div class="card-menu">
-              <a href="#">
+              <a href="#" class="menu-link" data-target="pizza">
                 <div class="card-menu-img">
                     <img src="assets/img/menu/Pizza.jpg" alt="Pizza">
                 </div>
@@ -128,8 +129,9 @@
                 </div>
               </a>
             </div>
+
             <div class="card-menu">
-              <a href="#">
+              <a href="#" class="menu-link" data-target="agua">
                 <div class="card-menu-img">
                     <img src="assets/img/menu/agua.jpeg" alt="Agua">
                 </div>
@@ -140,7 +142,7 @@
             </div>
 
             <div class="card-menu">
-              <a href="#">
+              <a href="#" class="menu-link" data-target="Refrigerantes">
                 <div class="card-menu-img">
                     <img src="assets/img/menu/coca-fanta-sprite.jpg" alt="Refrigerantes">
                 </div>
@@ -151,7 +153,7 @@
             </div>
 
             <div class="card-menu">
-              <a href="#">
+              <a href="#" class="menu-link" data-target="sumo">
                 <div class="card-menu-img">
                     <img src="assets/img/menu/sumo.jpg" alt="Sumo">
                 </div>
@@ -162,7 +164,7 @@
             </div>
          
             <div class="card-menu">
-              <a href="#">
+              <a href="#" class="menu-link" data-target="sorvete">
                 <div class="card-menu-img">
                     <img src="assets/img/menu/sorvetes.jpg" alt="sobremesas">
                 </div>
@@ -178,24 +180,158 @@
      <!-- Fechamento Cards menu-->
 
 
-     <!-- Informacao Card destaque-->
-     <section id="destaques" class="card-section" style="display: none;">
-      <h2>Destaques</h2>
-      <p>Bem-vindo à seção de Destaques! Aqui você encontra os itens mais populares.</p>
-      <a href="#" class="voltar" onclick="voltarMenu()">Voltar ao Menu</a>
-  </section>
-  
-  <section id="hamburguer" class="card-section" style="display: none;">
-      <h2>Hambúrguer</h2>
-      <p>Explore nossa seleção de hambúrgueres deliciosos e feitos na hora!</p>
-      <a href="#" class="voltar" onclick="voltarMenu()">Voltar ao Menu</a>
-  </section>
-  
-  <section id="frango" class="card-section" style="display: none;">
-      <h2>Frango</h2>
-      <p>Descubra nossas opções de frango crocante e saboroso.</p>
-      <a href="#" class="voltar" onclick="voltarMenu()">Voltar ao Menu</a>
-  </section>
+
+
+
+
+
+
+
+
+
+<!-- Templates das cards -->
+<div id="templates" style="display: none;">
+  <div id="destaques" class="menu-section">
+      <div class="back">
+        <a href="#menu-content" class="voltar"><i class="bi bi-arrow-left-short"></i></a>
+      </div>
+      <h3>Menu Destaque</h3>
+      <div class="container-produtos">
+        <div class="grade-cards">
+            <div class="card-produtos">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Cheese Burger Duplo" class="imagem-card">
+                <div class="corpo-card">
+                    <h3>Cheese Burger Duplo</h3>
+                    <p class="descricao-card">Pão de fermentação natural, burger 160g, queijo prato e maionese de casa.</p>
+                    <p class="preco-card">350,00 MT</p>
+                    <button class="botao-adicionar"><i class="bi bi-cart3"></i>Adicionar</button>
+                </div>
+            </div>
+            <div class="card-produtos">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Cheese Burger Duplo" class="imagem-card">
+                <div class="corpo-card">
+                    <h3>Cheese Burger Duplo</h3>
+                    <p class="descricao-card">Pão de fermentação natural, burger 160g, queijo prato e maionese de casa.</p>
+                    <p class="preco-card">350,00 MT</p>
+                    <button class="botao-adicionar"><i class="bi bi-cart3"></i>Adicionar</button>
+                </div>
+            </div>
+            <div class="card-produtos">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Cheese Burger Duplo" class="imagem-card">
+                <div class="corpo-card">
+                    <h3>Cheese Burger Duplo</h3>
+                    <p class="descricao-card">Pão de fermentação natural, burger 160g, queijo prato e maionese de casa.</p>
+                    <p class="preco-card">350,00 MT</p>
+                    <button class="botao-adicionar"><i class="bi bi-cart3"></i>Adicionar</button>
+                </div>
+            </div>
+            <div class="card-produtos">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Cheese Burger Duplo" class="imagem-card">
+                <div class="corpo-card">
+                    <h3>Cheese Burger Duplo</h3>
+                    <p class="descricao-card">Pão de fermentação natural, burger 160g, queijo prato e maionese de casa.</p>
+                    <p class="preco-card">350,00 MT</p>
+                    <button class="botao-adicionar"><i class="bi bi-cart3"></i>Adicionar</button>
+                </div>
+            </div>
+           
+            
+          
+
+            
+        </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div id="hamburguer" class="menu-section">
+      <div class="back">
+        <a href="#menu-content" class="voltar"><i class="bi bi-arrow-left-short"></i></a>
+      </div>
+      <h3>Menu de humburguer</h3>
+  </div>
+
+
+
+
+  <div id="frango" class="menu-section">
+      <div class="back">
+        <a href="#menu-content" class="voltar"><i class="bi bi-arrow-left-short"></i></a>
+      </div>
+      <h3>Menu de Frangos</h3>
+  </div>
+
+
+
+
+  <div id="sandes" class="menu-section">
+      <div class="back">
+        <a href="#menu-content" class="voltar"><i class="bi bi-arrow-left-short"></i></a>
+      </div>
+      <h3>Menu de Sandes</h3>
+  </div>
+
+
+
+  <div id="Batatas" class="menu-section">
+      <div class="back">
+        <a href="#menu-content" class="voltar"><i class="bi bi-arrow-left-short"></i></a>
+      </div>
+      <h3>Menu de Batatas-fritas</h3>
+  </div>
+
+
+
+  <div id="pizza" class="menu-section">
+      <div class="back">
+        <a href="#menu-content" class="voltar"><i class="bi bi-arrow-left-short"></i></a>
+      </div>
+      <h3>Menu de Pizza</h3>
+  </div>
+
+
+
+  <div id="agua" class="menu-section">
+      <div class="back">
+        <a href="#menu-content" class="voltar"><i class="bi bi-arrow-left-short"></i></a>
+      </div>
+      <h3>Menu de Água</h3>
+  </div>
+
+
+
+  <div id="Refrigerantes" class="menu-section">
+      <div class="back">
+        <a href="#menu-content" class="voltar"><i class="bi bi-arrow-left-short"></i></a>
+      </div>
+      <h3>Menu de Refrigerantes</h3>
+  </div>
+
+
+
+  <div id="sumo" class="menu-section">
+      <div class="back">
+        <a href="#menu-content" class="voltar"><i class="bi bi-arrow-left-short"></i></a>
+      </div>
+      <h3>Menu de Sumos</h3>
+  </div>
+
+
+
+  <div id="sorvete" class="menu-section">
+      <div class="back">
+        <a href="#menu-content" class="voltar"><i class="bi bi-arrow-left-short"></i></a>
+      </div>
+      <h3>Menu de sorvetes</h3>
+  </div>
+
+
+ 
+</div>
+
 
 
 
@@ -269,6 +405,7 @@
 
 
     <script src="assets/js/menu/nav.js"></script>
+    <script src="assets/js/menu/menu.js"></script>
     <script src="assets/js/promo/slider.js"></script>
 </body>
 </html>

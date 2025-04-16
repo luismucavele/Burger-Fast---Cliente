@@ -1,0 +1,38 @@
+
+@media (max-width: 1024px) {
+    .grade-cards {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .grade-cards {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 15px;
+    }
+
+    .imagem-card {
+        height: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-produtos {
+        padding: 5px;
+    }
+
+    .grade-cards {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .card-comida {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+
+
+

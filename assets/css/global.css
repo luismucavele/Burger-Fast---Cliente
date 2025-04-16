@@ -9,6 +9,13 @@
 @import url(page/menu/main-menu.css);
 @import url(page/promo/section-prom.css);
 
+
+/* cards dento do menu */
+@import url(page/menu/crad-produtos.css);
+@import url(mobile/menu/crad-produtos.css);
+
+
+
 /* Mobile */
 @import url(mobile/menu/main-menu.css);
 @import url(mobile/menu/section-prom.css);
