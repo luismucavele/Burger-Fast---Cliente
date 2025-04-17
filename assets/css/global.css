@@ -8,6 +8,7 @@
 @import url(global/body-menu.css);
 @import url(page/menu/main-menu.css);
 @import url(page/promo/section-prom.css);
+@import url(page/menu/notificacao.css);
 
 
 /* cards dento do menu */
@@ -16,12 +17,11 @@
 
 
 
+
 /* Mobile */
 @import url(mobile/menu/main-menu.css);
 @import url(mobile/menu/section-prom.css);
 
 /* ------------------------------------------------------------------------------- */
-
-
 
 

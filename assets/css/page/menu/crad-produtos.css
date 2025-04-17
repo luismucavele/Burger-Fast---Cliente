@@ -20,7 +20,6 @@
 .back{
     width: 100%;
     height: 30px;
-    border: 2px solid green;
     display: flex;
     align-items: center;
     justify-content: start;
@@ -43,7 +42,6 @@
 
 
 .container-produtos {
-    border: 2px solid yellow;
     max-width: 1200px;
     margin: 0 auto;
     padding: 10px;
@@ -69,7 +67,7 @@
 
 .imagem-card {
     width: 100%;
-    height: 200px;
+    height: 180px;
     object-fit: cover;
 }
 
@@ -90,6 +88,7 @@
     color: #000000;
     margin-bottom: 12px;
     line-height: 1.4;
+    text-align: center;
 }
 
 .preco-card {
@@ -97,6 +96,7 @@
     font-weight: 600;
     color: #D62300;
     margin-bottom: 15px;
+    text-align: center;
 }
 
 

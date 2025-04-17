@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Botão Promoções
     document.getElementById('btn-promo').addEventListener('click', function(e) {
-        document.title = "Promoções";
+        document.title = "Menu Promoções";
         e.preventDefault();
         document.getElementById('menu-content').style.display = 'none';
         document.getElementById('promo-content').style.display = 'block';
