@@ -124,10 +124,10 @@ nav .registo a:hover{
 }
 
 .registo a p{
-    padding: 5px 10px;
+    padding: 5px 8px;
     border-radius: 100%;
     background-color: #D62300;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .bi-cart3{
@@ -163,5 +163,7 @@ nav .registo a:hover{
 .sobre a:hover{
     color: #301107;
 }
+
+
 
 

@@ -258,6 +258,9 @@ main .carrinho{
     color: white;
   }
 
+
+
+
   .salvar-alteracoes{
     font-size: 12px;
     padding: 10px 20px;
@@ -266,13 +269,17 @@ main .carrinho{
     
   }
 
+ 
 
   .sair-conta{
     font-size: 12px;
     padding: 10px 30px;
     background-color: red;
-    border-radius: 20px;
-
-    
-    
+    border-radius: 20px;    
   }
+
+.salvar-alteracoes:hover,
+.sair-conta:hover {
+    transform: translateY(-3px); /* Move o botão 5px para cima */
+    transition: transform 0.4s ease; /* Suaviza o movimento */
+}

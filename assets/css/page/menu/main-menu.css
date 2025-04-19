@@ -86,7 +86,7 @@ main {
 
 .card-menu-img {
     width: 100%;
-    height: 200px; /* Reduzi a altura da imagem */
+    height: 250px; /* Reduzi a altura da imagem */
     overflow: hidden;
     flex-shrink: 0; /* Evita que a imagem diminua */
 }
@@ -123,6 +123,29 @@ main {
     text-align: center;
 }
 
+/* Estilo para o slider */
+.card-menu-img.slider {
+    position: relative;
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+  }
+
+
+
+  .card-menu-img.slider .slider-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+  }
+  
+  .card-menu-img.slider .slider-img.active {
+    opacity: 1;
+  }
 
 
 
