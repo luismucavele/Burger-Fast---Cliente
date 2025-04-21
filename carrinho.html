@@ -6,6 +6,9 @@
     <meta name="outhor" content="Luis Antonio Mucavele, Absalome Xavier, Marcelo das neves " />
     <link rel="shortcut icon" href="assets/img/shortcut icon.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/page/carrinho/carrinho.css">
+    <link rel="stylesheet" href="assets/css/mobile/carrinho/carrinho.css">
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
@@ -33,8 +36,21 @@
                 <a href="#" onclick=" abrirModal()"> <i class="bi bi-pencil"></i> Editar perfil</a>
             </div>
         </section>
-         <section class="carrinho">
-            
+         <section class="carrinho-principal">
+            <div class="carrinho-container">
+                <div class="carrinho">
+                    <h2>Seu Carrinho</h2>
+                    <div class="table-responsive">
+                        <table id="lista-carrinho" class="carrinho-table">
+                            <!-- Conteúdo será gerado pelo JavaScript -->
+                        </table>
+                    </div>
+                    <div class="carrinho-footer">
+                        <p id="total-carrinho" class="total-text">Total: 0,00 MT</p>
+                        <button class="botao-finalizar">Prosseguir com o pagamento</button>
+                    </div>
+                </div>
+            </div>
          </section>
     </main>
 
@@ -91,5 +107,13 @@
       </div>
 
       <script src="assets/js/carrinho/modal-perfil.js"></script>
+      <script src="assets/js/carrinho/meu-carrinho.js"></script>
+      <script>
+          // Inicializa o carrinho ao carregar a página
+          document.addEventListener('DOMContentLoaded', function() {
+            atualizarContadorCarrinho();
+            atualizarExibicaoCarrinho();
+        });
+      </script>
 </body>
 </html>

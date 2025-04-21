@@ -101,9 +101,8 @@ nav .registo{
 nav .registo a{
     text-decoration: none;
     color: white;
-    padding: 5px 25px ;
-    background-color: var(--cor);
-    border-radius: 30px;
+    padding: 8px 25px ;
+    border-radius: 20px;
     text-align: center;
     font-weight: 700;
     font-size: 14px;
@@ -114,14 +113,12 @@ nav .registo a{
 }
 #resgistar{
     background-color: #D62300;
-    padding: 7px 15px;
+    padding: 8px 15px;
 }
 #resgistar:hover{
     background-color: #851600;
 }
-nav .registo a:hover{
-    background-color: #301107;
-}
+
 
 .registo a p{
     padding: 5px 8px;
@@ -130,11 +127,29 @@ nav .registo a:hover{
     font-size: 12px;
 }
 
-.bi-cart3{
-    font-size: 17px;
+
+
+.carrinho-icon {
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    color: black;
 }
 
-
+.carrinho-icon span {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #D62300;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
 
 /* sobre nos  */
 

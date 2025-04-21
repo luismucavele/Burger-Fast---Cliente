@@ -1,0 +1,26 @@
+
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .carrinho-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 13px;
+    }
+  
+    .carrinho-table thead {
+        display: table-header-group;
+    }
+  
+    .carrinho-table td,
+    .carrinho-table th {
+        padding: 12px;
+    }
+  }
+  
+  
+  
+  
+  
+  

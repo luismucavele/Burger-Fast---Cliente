@@ -18,8 +18,7 @@
     <title>Menu Principal</title>
 </head>
 <body>
-      <!--notificação-->
-        <ul class="notifications"></ul>
+  
   
 
 
@@ -39,7 +38,12 @@
 
         <div class="registo">
             <a href="login.html" id="resgistar">registar</a>
-            <a href="carrinho.html"><i class="bi bi-cart3"></i><p>0</p></a>
+            <a href="carrinho.html">
+              <div class="carrinho-icon">
+                <i class="bi bi-cart3"></i>
+                <span id="contador-carrinho">0</span>
+            </div>
+            </a>
         </div>
     </nav>
 
@@ -215,15 +219,17 @@
       <h3>Menu Destaque</h3>
       <div class="container-produtos">
         <div class="grade-cards">
-            <div class="card-produtos">
-                <img src="assets/img/Food/Destaque/Destaque-1.jpg" alt="Cheese Burger Duplo" class="imagem-card">
-                <div class="corpo-card">
-                    <h3>Burger Duplo</h3>
-                    <p class="descricao-card">Pão de fermentação natural, burger 160g, queijo prato e maionese de casa.</p>
-                    <p class="preco-card">350,00 MT</p>
-                    <button class="botao-adicionar"><i class="bi bi-cart3"></i>Adicionar</button>
-                </div>
+          <div class="card-produtos">
+            <img src="assets/img/Food/Destaque/Destaque-1.jpg" alt="Pizza Margherita" class="imagem-card">
+            <div class="corpo-card">
+                <h3 class="produto-nome">Pizza Margherita</h3>
+                <p class="descricao-card">Pão de fermentação molho de tomate, mussarela e manjericão fresco</p>
+                <p class="preco-card">450,00 MT</p>
+                <button class="botao-adicionar" data-id="2" onclick="adicionarAoCarrinho(this)">
+                    <i class="bi bi-cart-plus"></i> Adicionar
+                </button>
             </div>
+        </div>
             <div class="card-produtos">
                 <img src="assets/img/Food/Destaque/Destaque-2.jpg" alt="Cheese Burger Duplo" class="imagem-card">
                 <div class="corpo-card">
@@ -1604,8 +1610,15 @@
     <script src="assets/js/menu/nav.js"></script>
     <script src="assets/js/menu/menu.js"></script>
     <script src="assets/js/promo/slider.js"></script>
-    <script src="assets/js/menu/notificacao.js"></script>
+    
     <script src="assets/js/menu/slider-destaque.js"></script>
+    <script src="assets/js/carrinho/meu-carrinho.js"></script>
+    <script>
+      // Inicializa o contador ao carregar a página
+      document.addEventListener('DOMContentLoaded', function() {
+            atualizarContadorCarrinho();
+        });
+    </script>
  
 </body>
 </html>
