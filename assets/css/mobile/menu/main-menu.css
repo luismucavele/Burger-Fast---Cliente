@@ -1,55 +1,81 @@
-/* Media Queries ajustadas para 3-2-1 colunas */
-@media (max-width: 767px) {
-    /* Mobile (1 coluna) */
+/* Estilo base para o container */
+.cards-menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adapta dinamicamente */
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* Ajustes para telas maiores */
+@media (min-width: 1024px) {
     .cards-menu-container {
-        grid-template-columns: 1fr;
-        gap: 16px; 
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas fixas */
+        gap: 32px;
     }
-    
-    .card-menu {
-        min-height: 250px;
-    }
-    
+
     .card-menu-img {
-        height: 200px;
+        height: 230px;
     }
-    
+
     main {
-        padding: 0 20px;
+        padding: 0 60px;
     }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
-    /* Tablet (2 colunas) */
+/* Ajustes para tablets */
+@media (max-width: 1023px) {
     .cards-menu-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 24px; 
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+        gap: 24px;
     }
-    
+
     .card-menu-img {
         height: 200px;
     }
-    
+
     main {
         padding: 0 40px;
     }
 }
 
-@media (min-width: 1024px) {
-    /* Desktop (3 colunas fixas) */
+/* Ajustes para smartphones */
+@media (max-width: 767px) {
     .cards-menu-container {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 32px; 
-        max-width: 1200px;
-        margin-left: auto;
-        margin-right: auto;
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+        gap: 16px;
     }
-    
+
+    .card-menu {
+        min-height: 200px;
+    }
+
     .card-menu-img {
-        height: 230px;
+        height: 180px;
     }
-    
+
     main {
-        padding: 0 60px;
+        padding: 0 20px;
+    }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 500px) {
+    .cards-menu-container {
+        grid-template-columns: 1fr; /* 1 coluna */
+        gap: 16px;
+    }
+
+    .card-menu {
+        min-height: 200px;
+    }
+
+    .card-menu-img {
+        height: 200px;
+    }
+
+    main {
+        padding: 0 16px;
     }
 }

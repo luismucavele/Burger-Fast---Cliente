@@ -1,0 +1,56 @@
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+    .perfil {
+        width: 90%; /* Adapta a largura para telas menores */
+        height: auto; /* Ajusta a altura automaticamente */
+        padding: 20px;
+    }
+  
+    .perfil h2 {
+        font-size: 30px; /* Reduz o tamanho do texto */
+    }
+  
+    .dados {
+        width: 100%; /* Ocupa toda a largura disponível */
+        height: auto; /* Ajusta a altura automaticamente */
+        gap: 15px;
+    }
+  
+    .input-group input {
+        font-size: 10px; /* Reduz o tamanho do texto */
+    }
+  
+    .salvar-alteracoes,
+    .sair-conta {
+        font-size: 10px; /* Reduz o tamanho do texto */
+        padding: 8px 16px;
+    }
+  }
+  
+  /* Responsividade para smartphones */
+  @media (max-width: 480px) {
+    .perfil {
+        width: 100%; /* Ocupa toda a largura da tela */
+        padding: 15px;
+    }
+  
+    .perfil h2 {
+        font-size: 24px; /* Reduz ainda mais o tamanho do texto */
+    }
+  
+    .dados {
+        width: 100%; /* Ocupa toda a largura disponível */
+        gap: 10px;
+    }
+  
+    .input-group input {
+        font-size: 8px; /* Reduz ainda mais o tamanho do texto */
+    }
+  
+    .salvar-alteracoes,
+    .sair-conta {
+        font-size: 8px; /* Reduz ainda mais o tamanho do texto */
+        padding: 6px 12px;
+    }
+  }

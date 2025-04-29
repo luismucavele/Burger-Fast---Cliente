@@ -1,0 +1,129 @@
+@media (min-width: 1201px) {
+    .navegacao-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    nav .menu{
+        display: none;
+    }
+    nav .registo{
+        display: none;
+    }
+
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 60px;
+    }
+    nav .logo img {
+        width: 50px;
+        height: 50px;
+      }
+
+      .sobre{
+        height: 30px;
+        margin-top: 60px;
+      }
+
+      .cardapio{
+        margin-top: 85px;
+      }
+
+      .navegacao-mobile {
+        position: fixed;
+        height: 55px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #F5EBDC;
+        z-index:9999;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        border-top: 1px solid rgba(128, 128, 128, 0.479);
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        
+    }   
+
+    .item-navegacao{
+        font-size: 15px;
+    }
+
+    .sobre a{
+        display: none;
+    }
+  
+}
+
+
+@media (max-width: 900px){
+    .item-navegacao{
+        font-size: 14px;
+    }
+  
+}
+
+@media (max-width: 500px){
+    .item-navegacao{
+        font-size: 12px;
+    }
+    .navegacao-mobile{
+        height: 50px;
+    }
+}
+
+@media (max-width: 400px){
+    .item-navegacao{
+        font-size: 11px;
+    }
+
+}
+
+@media (max-width: 350px){
+    .item-navegacao{
+        font-size: 10px;
+    }
+ 
+}
+
+
+
+
+
+
+.item-navegacao {
+    text-align: center;
+    color: #502314;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 2px;
+    flex: 1;
+    max-width: 20%;
+    transition: all 0.2s ease;
+}
+
+   .item-navegacao:hover, .item-navegacao:focus {
+            color: #d62300;
+        }
+        
+        .item-navegacao.ativo {
+            color: #d62300;
+            font-weight: bold;
+        }
+        
+        .icone-navegacao {
+            font-size: clamp(18px, 5vw, 22px);
+            margin-bottom: 4px;
+        }
+
+
+
+
+
+

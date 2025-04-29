@@ -14,28 +14,46 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/mobile/menu/nav.css">
     
-    <title>Burger Fast - Perfil</title>
+    <title>Burger Fast - carrinho</title>
 </head>
 <body>
 
 
+    
+<!--Nav  mobile-->
+<div class="navegacao-mobile">
+  
+  
+    <a href="menu.html" class="item-navegacao">
+      <i class="bi bi-menu-button"></i>
+      Menu
+  </a>
+
+  <a href="" class="item-navegacao" id="abrir-promocoes">
+    <i class="bi bi-tag-fill"></i>
+    Promoções
+</a>
+    <a href="carrinho.html" class="item-navegacao">
+      <i class="bi bi-cart3"></i>
+      Carrinho
+  </a>
+  
+    <a href="#" class="item-navegacao">
+      <i class="bi bi-exclamation-circle-fill"></i>
+      Sobre-nos
+  </a>
+  
+    <a href="perfil-usuario.html" class="item-navegacao">
+      <i class="bi bi-person-circle"></i>
+      Perfil
+  </a>
+  </div>
+  
 
     
     <main>
-        <section class="Perfil">
-            <div class="foto">
-                <div class="circulo">
-                    <img src="assets/img/perfil.png" alt="perfil">
-                </div>
-            </div>
-            <div class="nome">
-                <h1>Absalome Xavier</h1>
-            </div>
-            <div class="editar-perfil">
-                <a href="#" onclick=" abrirModal()"> <i class="bi bi-pencil"></i> Editar perfil</a>
-            </div>
-        </section>
          <section class="carrinho-principal">
             <div class="carrinho-container">
                 <div class="carrinho">
@@ -54,60 +72,9 @@
          </section>
     </main>
 
-
-
-
-
-
-
-
-
-
-
-    <!--Modal Perfil-->
-    <div class="fundo-modal" id="modalPerfil">
-        <div class="modal-perfil">
-          <button class="botao-fechar" onclick="fecharModal()">×</button>
-          <h2>Editar Perfil</h2>
-         
-          <!-- Foto de perfil -->
-          <div class="foto-perfil">
-            <div class="circulo-foto">
-                <img class="imagem-perfil" src="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg" alt="Foto de Perfil">
-            </div>
-            <div class="botao-imagem">
-                <i class="fa fa-camera icone-upload"></i>
-                <input class="input-upload" type="file" accept="image/*">
-            </div>
-           </div>
-
-           <div class="dados">
-
-            <div class="input-group">
-                <label>Nome</label>
-                <input type="text"  placeholder="Nome Completo">
-            </div>
-            <div class="input-group">
-                <label>Email</label>
-                <input type="email" placeholder="Seu Email">
-            </div>
-            <div class="input-group">
-                <label>Endereço</label>
-                <input type="text"  placeholder="Endereço">
-            </div>
-           
-            <div class="salvar-sair">
-                <a href="#"><p class="salvar-alteracoes">Salvar alterações</p></a>
-                <a href="index.html"><p class="sair-conta">Sair da conta </p></a>
-                
-            </div>
-
-        </div>
-        </div>
-      </div>
-
-      <script src="assets/js/carrinho/modal-perfil.js"></script>
+    
       <script src="assets/js/carrinho/meu-carrinho.js"></script>
+      <script src="assets/js/menu/nav.js"></script>
       <script>
           // Inicializa o carrinho ao carregar a página
           document.addEventListener('DOMContentLoaded', function() {

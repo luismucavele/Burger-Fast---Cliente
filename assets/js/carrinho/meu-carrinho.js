@@ -45,7 +45,7 @@ function adicionarAoCarrinho(botao) {
     if (!produtoJaExistia) {
         atualizarContadorCarrinho();
     }
-
+ 
     atualizarExibicaoCarrinho();
 }
 
