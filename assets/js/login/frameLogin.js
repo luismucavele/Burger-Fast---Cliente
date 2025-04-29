@@ -26,13 +26,57 @@ function validateInput(inputId, errorId, condition) {
     }
 }
 
-function validateRegister() {
+
+async function validateRegister() {
     if (!validateInput('name', 'nameError', val => val.length >= 8)) return;
     if (!validateInput('email', 'emailError', val => val.includes('@'))) return;
-    alert("Cadastro realizado com sucesso!");
+
+    const nome = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+
+    try {
+        const response = await fetch('http://localhost:3000/api/register', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ nome, email })
+        });
+
+        const data = await response.json();
+        if (response.ok) {
+            alert(data.message); // Exibe mensagem de sucesso
+            showLogin(); // Alterna para a aba de login
+        } else {
+            alert(data.error); // Exibe mensagem de erro
+        }
+    } catch (error) {
+        console.error('Erro ao registrar:', error);
+        alert('Erro ao registrar. Tente novamente mais tarde.');
+    }
 }
 
-function validateLogin() {
+async function validateLogin() {
     if (!validateInput('loginEmail', 'loginEmailError', val => val.includes('@'))) return;
-    alert("Login realizado com sucesso!");
+
+    const email = document.getElementById('loginEmail').value;
+
+    try {
+        const response = await fetch('http://localhost:3000/api/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email })
+        });
+
+        const data = await response.json();
+        if (response.ok) {
+            alert(data.message); // Exibe mensagem de sucesso
+            console.log('Cliente logado:', data.cliente); // Exibe os dados do cliente no console
+            // Redirecionar para outra página, se necessário
+            // window.location.href = 'pagina-principal.html';
+        } else {
+            alert(data.error); // Exibe mensagem de erro
+        }
+    } catch (error) {
+        console.error('Erro ao fazer login:', error);
+        alert('Erro ao fazer login. Tente novamente mais tarde.');
+    }
 }
