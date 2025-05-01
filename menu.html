@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="assets/css/mobile/menu/nav.css">
 
 
-    <title>Menu principal</title>
+    <title>Menu principal</title> 
   </head>
 
   <body>
@@ -36,7 +36,7 @@
 <div class="navegacao-mobile">
 
   <a href="menu.html" class="item-navegacao">
-    <i class="bi bi-menu-button"></i>
+    <i class="bi bi-menu-button"></i> 
     Menu
 </a>
   <a href="" class="item-navegacao" id="abrir-promocoes">
@@ -49,7 +49,7 @@
     Carrinho
 </a>
 
-  <a href="#" class="item-navegacao">
+  <a href="sobre-nos.html" class="item-navegacao">
     <i class="bi bi-exclamation-circle-fill"></i>
     Sobre-nos
 </a>
@@ -79,7 +79,7 @@
       <div class="registo">
         <a href="login.html" id="resgistar">registar</a>
 
-        <a href="carrinho.html">
+        <a href="carrinho.html"> 
           <div class="carrinho-icon">
             <i class="bi bi-cart3"></i>
             <span id="contador-carrinho">0</span>
@@ -99,7 +99,8 @@
 
     <!--sobre nos-->
     <div class="sobre">
-      <a href="#">Sobre-nos</a>
+      <a href="login.html" id="resgistar-mobile">registar</a>
+      <a href="sobre-nos.html" target="_blank"><i class="bi bi-exclamation-circle-fill"></i> Sobre-nos</a>
     </div>
     <!--sobre nos fechamento-->
 
@@ -428,6 +429,7 @@
     <script src="assets/js/menu/slider-destaque.js"></script>
     <script src="assets/js/carrinho/meu-carrinho.js"></script>
     <script src="assets/db/Produtos.js"></script>
+    <script src="assets/js/menu/validacao-login.js"></script>
     <script>
       // Inicializa o contador ao carregar a página
       document.addEventListener("DOMContentLoaded", function () {

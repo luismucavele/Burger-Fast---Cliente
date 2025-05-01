@@ -51,3 +51,17 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+
+
+// Verifica se o cliente está logado
+document.addEventListener('DOMContentLoaded', function () {
+    const cliente = JSON.parse(localStorage.getItem('cliente'));
+
+    // Exibe o botão "Registar" se o cliente não estiver logado
+    const registarButton = document.getElementById('resgistar');
+    if (!cliente && registarButton) {
+        registarButton.style.display = 'block';
+    } else {
+        console.log('Cliente logado:', cliente);
+    }
+});

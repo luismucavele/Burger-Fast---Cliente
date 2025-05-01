@@ -1,0 +1,284 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #F5EBDC;
+}
+
+.logo{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+h1{
+    color: #502314 ;
+}
+
+main{
+    width: 100%;
+    height: auto;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+/* Banner */
+.banner {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1920x600');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.banner h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.banner p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Seções */
+.secao {
+    padding: 40px 0;
+}
+
+.secao h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #e67e22;
+}
+
+.conteudo-secao {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.conteudo-secao p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+/* Nossa História */
+.nossa-historia {
+    background-color: #502314 ;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* Missão, Visão, Valores */
+.valores-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card-valor {
+    background: #502314;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.card-valor h3 {
+    color: #e67e22;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* Por que escolher */
+.diferenciais {
+    background-color: #F5EBDC;
+}
+
+.grid-diferenciais {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.item-diferencial {
+    display: flex;
+    align-items: flex-start;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.icone-diferencial {
+    font-size: 24px;
+    color: #e67e22;
+    margin-right: 15px;
+    margin-top: 5px;
+}
+
+.item-diferencial h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* Depoimentos */
+.depoimentos {
+    background-color: #F5EBDC;
+}
+
+.grid-depoimentos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card-depoimento {
+    background: #502314;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.card-depoimento p {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.card-depoimento .autor {
+    font-weight: bold;
+    color: #e67e22;
+}
+
+/* Equipe */
+.grid-equipe {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.membro-equipe {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.membro-equipe img {
+    width: 100%;
+    margin-bottom: 15px;
+    max-width: 150px;
+}
+
+/* Contato */
+.info-contato {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.item-contato {
+    text-align: center;
+    padding: 25px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.item-contato i {
+    font-size: 30px;
+    color: #e67e22;
+    margin-bottom: 15px;
+}
+
+/* Rodapé */
+.rodape {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 30px 0 15px;
+    text-align: center;
+}
+
+.redes-sociais {
+    margin: 20px 0;
+}
+
+.redes-sociais a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.redes-sociais a:hover {
+    color: #e67e22;
+}
+
+.copyright {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #444;
+    font-size: 14px;
+}
+
+/* Responsividade para mobile */
+@media (max-width: 600px) {
+    .banner {
+        height: 250px;
+        padding: 0 20px;
+    }
+    
+    .banner h1 {
+        font-size: 28px;
+    }
+    
+    .banner p {
+        font-size: 16px;
+    }
+    
+    .secao h2 {
+        font-size: 26px;
+    }
+    
+    .conteudo-secao p {
+        font-size: 16px;
+        text-align: left;
+    }
+    
+    .card-valor, .item-diferencial, .card-depoimento, .membro-equipe, .item-contato {
+        padding: 20px 15px;
+    }
+}
+

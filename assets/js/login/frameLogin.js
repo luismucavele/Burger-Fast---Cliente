@@ -70,8 +70,12 @@ async function validateLogin() {
         if (response.ok) {
             alert(data.message); // Exibe mensagem de sucesso
             console.log('Cliente logado:', data.cliente); // Exibe os dados do cliente no console
-            // Redirecionar para outra página, se necessário
-            // window.location.href = 'pagina-principal.html';
+
+            // Armazena os dados do cliente no localStorage
+            localStorage.setItem('cliente', JSON.stringify(data.cliente));
+
+            // Redireciona para o menu principal
+            window.location.href = 'menu.html';
         } else {
             alert(data.error); // Exibe mensagem de erro
         }
