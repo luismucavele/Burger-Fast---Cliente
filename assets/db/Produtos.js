@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function carregarProdutos(categoria) {
-    fetch(`http://localhost:3000/api/produtos`) // Substitua pela URL do seu backend
+    fetch(`http://localhost:3000/api/produtos/${categoria}`)    // Substitua pela URL do seu backend
         .then(response => response.json())
         .then(produtos => {
             const container = (categoria === 'agua' || categoria === 'refrigerantes' || categoria === 'sumo')
