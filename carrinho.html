@@ -65,16 +65,72 @@
                     </div>
                     <div class="carrinho-footer">
                         <p id="total-carrinho" class="total-text">Total: 0,00 MT</p>
-                        <button class="botao-finalizar">Prosseguir com o pagamento</button>
+                        <button class="botao-finalizar" onclick="abrirModalPagamento()">Prosseguir</button>
                     </div>
                 </div>
             </div>
          </section>
+
+         <section class="meus-pedidos-principal">
+          <div class="meus-pedidos-container">
+              <h2 style="text-align: center;">Meus Pedidos </h2>
+              <div id="lista-pedidos">
+                  <!-- Aqui aparecerão os pedidos do cliente -->
+              </div>
+          </div>
+        </section>
     </main>
 
+    <!-- Modal Gateway de Pagamento -->
+<div id="modal-pagamento" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); align-items:center; justify-content:center;">
+    <div class="container-pagamento" style="margin:auto; position:relative; max-width:500px;">
+      <span id="fechar-modal-pagamento" style="position:absolute;top:10px;right:18px;font-size:2rem;cursor:pointer;color:#888;z-index:10;">&times;</span>
+      <div class="cabecalho-pagamento">
+        <h2>Gateway de Pagamento</h2>
+        <p>Complete sua compra com segurança</p>
+      </div>
+      <div class="corpo-pagamento" id="form-pagamento">
+        <div class="icones-cartao">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" class="icone-cartao ativo" id="icone-visa">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" class="icone-cartao" id="icone-mastercard">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/American_Express_logo_%282018%29.svg" alt="Amex" class="icone-cartao" id="icone-amex">
+        </div>
+        <div class="grupo-formulario">
+          <label for="numero-cartao">Número do Cartão</label>
+          <input type="text" id="numero-cartao" class="controle-formulario" placeholder="1234 5678 9012 3456" maxlength="19">
+        </div>
+        <div class="grupo-formulario">
+          <label for="nome-cartao">Nome no Cartão</label>
+          <input type="text" id="nome-cartao" class="controle-formulario" placeholder="João Silva">
+        </div>
+        <div class="linha">
+          <div class="grupo-formulario">
+            <label for="validade">Validade</label>
+            <input type="text" id="validade" class="controle-formulario" placeholder="MM/AA" maxlength="5">
+          </div>
+          <div class="grupo-formulario">
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" class="controle-formulario" placeholder="123" maxlength="4">
+          </div>
+        </div>
+        <button class="botao botao-primario" id="botao-pagar" onclick="finalizarCompra()">
+          <i class="fas fa-lock"></i> Pagar <span id="valor-total-pagamento">R$ 0,00</span>
+        </button>
+        <div class="sucesso-pagamento" id="sucesso-pagamento" style="display:none;">
+          <i class="fas fa-check-circle"></i> Pagamento realizado com sucesso!
+        </div>
+      </div>
+      <div class="rodape-pagamento">
+        <p>Seu pagamento é seguro com criptografia de 256-bit. <a href="#">Saiba mais</a></p>
+      </div>
+    </div>
+  </div>
     
       <script src="assets/js/carrinho/meu-carrinho.js"></script>
+      <script src="assets/js/carrinho/metodo-pagamento.js"></script>
+      <script src="assets/js/carrinho/carrinho-por-cliente.js"></script>
       <script src="assets/js/menu/nav.js"></script>
+      <script src="assets/js/carrinho/finalizar-pedido.js"></script>
       <script>
           // Inicializa o carrinho ao carregar a página
           document.addEventListener('DOMContentLoaded', function() {

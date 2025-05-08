@@ -84,3 +84,9 @@ async function validateLogin() {
         alert('Erro ao fazer login. Tente novamente mais tarde.');
     }
 }
+
+function logout() {
+    limparCarrinhoCliente();
+    localStorage.removeItem('cliente');
+    window.location.href = 'login.html';
+}

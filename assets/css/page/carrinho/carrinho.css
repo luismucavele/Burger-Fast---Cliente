@@ -17,6 +17,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 
@@ -245,6 +246,183 @@ main .carrinho-principal{
   border: 1px solid #ddd;
 }
 
+
+
+/* lista de pedidos */
+
+.tabela-pedidos {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+.tabela-pedidos th, .tabela-pedidos td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+.tabela-pedidos th {
+  background: #502314;
+  color: white;
+}
+
+
+
+/* Modal de pagamento */
+
+
+:root {
+  --primaria: #D62300;
+  --escuro: #000000;
+  --claro: #ffffff;
+  --cinza: #f5f5f5;
+  --sucesso: #28a745;
+  --borda: #e0e0e0;
+}
+
+
+.container-pagamento {
+  background-color: var(--claro);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.cabecalho-pagamento {
+  background-color: #502314;
+  color: var(--claro);
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.cabecalho-pagamento h2 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.cabecalho-pagamento p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.logo-react {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  animation: girar 10s linear infinite;
+}
+
+@keyframes girar {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.corpo-pagamento {
+  padding: 25px;
+}
+
+.grupo-formulario {
+  margin-bottom: 20px;
+}
+
+.grupo-formulario label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.controle-formulario {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.controle-formulario:focus {
+  outline: none;
+}
+
+.icones-cartao {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.icone-cartao {
+  width: 40px;
+  height: 25px;
+  object-fit: contain;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+
+.icone-cartao.ativo {
+  opacity: 1;
+}
+
+.linha {
+  display: flex;
+  gap: 15px;
+}
+
+.linha .grupo-formulario {
+  flex: 1;
+}
+
+.botao {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.botao-primario {
+  background-color: var(--primaria);
+  color: var(--claro);
+}
+
+.botao-primario:hover {
+  background-color: #4fc7e6;
+  transform: translateY(-2px);
+}
+
+.rodape-pagamento {
+  padding: 15px 25px;
+  background-color: var(--cinza);
+  text-align: center;
+  font-size: 0.8rem;
+  color: #666;
+  border-top: 1px solid var(--borda);
+}
+
+.rodape-pagamento a {
+  color: var(--primaria);
+  text-decoration: none;
+}
+
+@media (max-width: 480px) {
+  .linha {
+      flex-direction: column;
+      gap: 0;
+  }
+  
+  .corpo-pagamento {
+      padding: 20px 15px;
+  }
+}
 
 
 

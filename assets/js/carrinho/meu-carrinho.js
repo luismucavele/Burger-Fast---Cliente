@@ -1,13 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
     atualizarContadorCarrinho();
     atualizarExibicaoCarrinho();
-    
+
     const carrinhoIcon = document.querySelector('.carrinho-icon');
     const carrinhoContainer = document.querySelector('.carrinho-container');
-    
-    carrinhoIcon.addEventListener('click', function() {
-        carrinhoContainer.classList.toggle('ativo');
-    });
+
+    if (carrinhoIcon && carrinhoContainer) {
+        carrinhoIcon.addEventListener('click', function() {
+            carrinhoContainer.classList.toggle('ativo');
+        });
+    }
 });
 
 // Adiciona produto ao carrinho
@@ -20,7 +22,7 @@ function adicionarAoCarrinho(botao) {
 
     const precoNumerico = parseFloat(preco.replace(/[^\d,]/g, '').replace(',', '.'));
 
-    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    let carrinho = carregarCarrinhoCliente();
     let produtoJaExistia = false;
 
     const produtoExistenteIndex = carrinho.findIndex(item => item.nome === nome);
@@ -40,18 +42,18 @@ function adicionarAoCarrinho(botao) {
         mostrarFeedback(`${nome} adicionado ao carrinho!`, 'success');
     }
 
-    localStorage.setItem('carrinho', JSON.stringify(carrinho));
+    salvarCarrinhoCliente(carrinho);
 
     if (!produtoJaExistia) {
         atualizarContadorCarrinho();
     }
- 
+
     atualizarExibicaoCarrinho();
 }
 
 // Atualiza o contador de itens no carrinho
 function atualizarContadorCarrinho() {
-    const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    const carrinho = carregarCarrinhoCliente();
     const contador = document.getElementById('contador-carrinho');
     if (contador) {
         contador.textContent = carrinho.length;
@@ -63,22 +65,24 @@ function atualizarContadorCarrinho() {
 function atualizarExibicaoCarrinho() {
     const listaCarrinho = document.getElementById('lista-carrinho');
     const totalCarrinho = document.getElementById('total-carrinho');
-    const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-    
+    const carrinho = carregarCarrinhoCliente();
+
+    if (!listaCarrinho) return;
+
     listaCarrinho.innerHTML = '';
-    
+
     if (carrinho.length === 0) {
         listaCarrinho.innerHTML = '<div class="carrinho-vazio"><i class="bi bi-cart-x"></i><p>Seu carrinho está vazio</p></div>';
-        totalCarrinho.textContent = 'Total: 0,00 MT';
+        if (totalCarrinho) totalCarrinho.textContent = 'Total: 0,00 MT';
         return;
     }
-    
+
     let total = 0;
-    
+
     // Criar tabela
     const table = document.createElement('table');
     table.className = 'carrinho-table';
-    
+
     // Cabeçalho
     const thead = document.createElement('thead');
     thead.innerHTML = `
@@ -93,14 +97,14 @@ function atualizarExibicaoCarrinho() {
         </tr>
     `;
     table.appendChild(thead);
-    
+
     // Corpo
     const tbody = document.createElement('tbody');
-    
+
     carrinho.forEach(produto => {
         const subtotal = produto.preco * produto.quantidade;
         total += subtotal;
-        
+
         const row = document.createElement('tr');
         row.innerHTML = `
             <td class="col-imagem"><img src="${produto.imagem}" alt="${produto.nome}" class="produto-img"></td>
@@ -119,18 +123,18 @@ function atualizarExibicaoCarrinho() {
                 <i class="bi bi-trash remover-item" onclick="removerItem('${produto.nome}')"></i>
             </td>
         `;
-        
+
         tbody.appendChild(row);
     });
-    
+
     table.appendChild(tbody);
     listaCarrinho.appendChild(table);
-    totalCarrinho.textContent = `Total: ${total.toFixed(2).replace('.', ',')} MT`;
+    if (totalCarrinho) totalCarrinho.textContent = `Total: ${total.toFixed(2).replace('.', ',')} MT`;
 }
 
 // Altera a quantidade de um item
 function alterarQuantidade(nomeProduto, delta) {
-    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    let carrinho = carregarCarrinhoCliente();
     const produtoIndex = carrinho.findIndex(item => item.nome === nomeProduto);
 
     if (produtoIndex !== -1) {
@@ -141,17 +145,16 @@ function alterarQuantidade(nomeProduto, delta) {
             carrinho[produtoIndex].quantidade = 1;
         }
 
-        localStorage.setItem('carrinho', JSON.stringify(carrinho));
+        salvarCarrinhoCliente(carrinho);
         atualizarExibicaoCarrinho();
     }
 }
 
-
 // Remove um item do carrinho
 function removerItem(nomeProduto) {
-    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    let carrinho = carregarCarrinhoCliente();
     carrinho = carrinho.filter(item => item.nome !== nomeProduto);
-    localStorage.setItem('carrinho', JSON.stringify(carrinho));
+    salvarCarrinhoCliente(carrinho);
     atualizarContadorCarrinho();
     atualizarExibicaoCarrinho();
 }
@@ -176,7 +179,50 @@ function mostrarFeedback(mensagem, tipo) {
 
 
 
+//lista de carrinho
+async function carregarPedidosCliente() {
+    const cliente = JSON.parse(localStorage.getItem('cliente'));
+    if (!cliente || !cliente.email) return; // Só busca se estiver logado
 
+    try {
+        const resp = await fetch(`http://localhost:3000/api/pedidos-cliente?email=${encodeURIComponent(cliente.email)}`);
+        const pedidos = await resp.json();
 
+        const listaPedidos = document.getElementById('lista-pedidos');
+        if (!Array.isArray(pedidos) || pedidos.length === 0) {
+            listaPedidos.innerHTML = '<p>Nenhum pedido encontrado.</p>';
+            return;
+        }
 
+        let html = `
+          <table class="tabela-pedidos">
+            <thead>
+              <tr>
+                <th>#Pedido</th>
+                <th>Data</th>
+                <th>Status</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
+        `;
+        pedidos.forEach(p => {
+            html += `
+              <tr>
+                <td>${p.id}</td>
+                <td>${new Date(p.data).toLocaleString()}</td>
+                <td>${p.status}</td>
+                <td>${parseFloat(p.total).toFixed(2).replace('.', ',')} MT</td>
+              </tr>
+            `;
+        });
+        html += `</tbody></table>`;
 
+        listaPedidos.innerHTML = html;
+
+    } catch (e) {
+        document.getElementById('lista-pedidos').innerHTML = '<p>Erro ao buscar pedidos.</p>';
+    }
+}
+// Chama ao carregar a página
+document.addEventListener('DOMContentLoaded', carregarPedidosCliente);
